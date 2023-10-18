@@ -1,0 +1,451 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Rubik",sans-serif;
+	line-height: 1;
+	font-weight: 400;
+	color: #555; 
+}
+
+
+.container {
+	max-width: 1200px;
+	padding: 0 32px;
+	margin: 0 auto;
+}
+
+.grid {
+	display: grid;
+	column-gap: 64px;
+	row-gap: 96px;
+}
+.grid--2-cols {
+	grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+	grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+	grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+	grid-template-columns: repeat(5, 1fr);
+}
+.grid--center-v {
+	align-items: center;
+}
+
+.heading-primary, .heading-secondary, .programs-heading {
+	font-weight: 700;
+	color: black;
+	letter-spacing: -0.5px;
+}
+
+.heading-primary {
+	font-size: 52px;
+	line-height: 1.05;
+	margin-bottom: 32px;
+}
+
+.heading-secondary {
+	font-size: 44px;
+	line-height: 1.2;
+	margin-bottom: 96px;
+}
+
+.programs-heading {
+	font-size: 30px;
+	line-height: 1.2;
+	margin-bottom: 32px;
+}
+.sub-heading {
+	display: block;
+	font-size: 16px;
+	font-weight: 500;
+	color: #ff0000;
+	text-transform: uppercase;
+	margin-bottom: 16px;
+	letter-spacing: 0.75px;
+}
+
+.btn,.btn:link, .btn:visited {
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 16px 32px;
+	text-decoration: none;
+	border-radius: 9px;
+	font-family: inherit;
+	/* put transition on original "state" */
+	transition: background-color 0.5s;
+}
+.btn--full:link, .btn--full:visited {
+	background-color: #000000;
+	color: #fff;
+}
+.btn--full:hover, .btn--full:active {
+	background-color: #333333;
+}
+.btn--outline:link, .btn--outline:visited {
+	background-color: #fff;
+	color: #000000;
+}
+.btn--outline:hover, .btn--outline:active {
+	background-color: #e6e6e6;
+	/* border: 3px solid white; */
+	/* Trick to add border inside */
+	box-shadow: inset 0 0 0 3px #fff;
+	/* inset keyword used to add shadow inside of the element */
+}
+
+.btn--form {
+	background-color: #e60000;
+	color: #fff;
+	align-self: end;
+	padding: 12px;
+}
+.btn--form:hover {
+	border-color: #ffffff;
+}
+.margin-right-sm {
+	margin-right: 16px !important;
+}
+
+/*****************************/
+/* HEADER */
+/*****************************/
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #e6e6e6;
+	/* beacuse we want to be sticky later */
+	height: 96px;
+	padding: 0 48px;
+}
+.logo {
+	/* height: 22px; */
+	height: 62px;
+}
+
+/*****************************/
+/* NAVUGATION */
+/*****************************/
+.main-nav-list {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 32px;
+}
+.main-nav-link:link, .main-nav-link:visited {
+	display: inline-block;
+	text-decoration: none;
+	color: #000000;
+	font-weight: 500;
+	font-size: 18px;
+	transition: all 0.3s;
+}
+
+.main-nav-link:hover, .main-nav-link:active {
+	color: #666666;
+}
+
+.main-nav-link.nav-cta:link, .main-nav-link.nav-cta:visited {
+	/* to gave classname is like this to incresese specificity */
+	padding: 12px 24px;
+	border-radius: 9px;
+	color: #fff;
+	background-color: #000000;
+}
+.main-nav-link.nav-cta:hover, .main-nav-link.nav-cta:active {
+	color: #b3b3b3;
+}
+/*****************************/
+/* HERO SECTION */
+/*****************************/
+.section-hero {
+	background-color: #e6e6e6;
+	padding: 48px 0 96px 0px;
+}
+.hero {
+	margin: 0 auto;
+	padding: 0 22px;
+	max-width: 1300px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 96px;
+	align-items: center;
+}
+
+.hero-discription {
+	font-size: 20px;
+	line-height: 1.6;
+	margin-bottom: 48px;
+}
+
+.hero-img {
+	width: 100%;
+}
+
+/********************************/
+/* FEATURED IN SECTION */
+/********************************/
+
+.section-featured {
+	padding: 38px 0 32px 0;
+}
+
+.heading-featured {
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.75px;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.image-container {
+	display: flex;
+	justify-content: space-between;
+}
+.logos img {
+	height: 32px;
+	filter: brightness(0);
+	opacity: 50%;
+}
+/********************************/
+/* HOW IT PROGRAM SECTION WORKS */
+/********************************/
+
+.section-programs {
+	padding: 96px 0;
+	background-color: #e6e6e6;
+}
+.programs-image-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.programs-image {
+	width: 100%;
+}
+
+.programs-discription {
+	font-size: 20px;
+	line-height: 1.8;
+}
+
+/************************/
+/* SECTION OF STUDENT WORKS */
+/************************/
+.section-student-works {
+	padding: 96px 0;
+}
+
+.student-works img {
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.student-works img:hover {
+	transform: scale(1.2);
+}
+/**************************/
+/* SECTION OF TESTIMONIAL */
+/**************************/
+
+.section-testimonial {
+	padding: 96px 0;
+}
+.testimonial-content-box {
+	background-color: #e6e6e6;
+	padding: 25px;
+	border-radius: 10px;
+}
+.testimonial-content-box img{
+	height: 80px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+.testimonial-content-box p {
+	line-height: 1.2;
+	margin-bottom: 15px;
+	width: 300px;
+	text-align: center;
+
+}
+.testimonial-content-box span {
+	display: block;
+	text-align: center;
+	color: #0cb800;
+}
+
+/************************/
+/* SECTION OF FACULTIES */
+/************************/
+.section-faculties {
+	padding: 96px 0;
+}
+.faculties-content-box {
+	padding: 15px;
+	background-color: #000000;
+	height: 450px;
+	border-radius: 15px;
+	color: #fff;
+}
+.faculties-content-box h3 {
+	margin-top: 25px;
+	text-align: center;
+}
+.faculties-content-box span {
+	margin-top: 10px;
+	display: block;
+	text-align: center;
+}
+.faculties-content-box img {
+	width: 100%;
+	border-radius: 15px;
+}
+
+/************************/
+/* SECTION OF CONTACT US */
+/************************/
+
+.section-contact-us {
+	/* top / right / bottom / left */
+	/* padding: 96px 0 128px 0; */
+	/* top / horizontal / bottom*/
+	padding: 96px 0 128px;
+}
+.contact-us {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	background-color: #000000;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 11px;
+	overflow: hidden;
+	/* background-image: linear-gradient(#000000, #222222); */
+}
+
+.contact-us-text-box{
+	color: #fff;
+	padding: 48px 64px 64px 64px;
+}
+.contact-us .heading-secondary {
+	color: #fff;
+	margin-bottom: 32px;
+}
+.contact-us-text {
+	font-size: 18px;
+	line-height: 1.8;
+	margin-bottom: 48px;
+}
+.contact-us-image-box {
+	background-image: linear-gradient(#00000089, #9a9a9a5e), url("../images/pexels-aidil-bahaman-5973792.jpg");
+	background-size: cover;
+	background-position: top;
+}
+
+.contact-us-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 32px;
+	row-gap: 24px;
+}
+
+.contact-us-form label {
+	display: block;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 12px;
+}
+.contact-us-form input, .contact-us-form select{
+	width: 100%;
+	padding: 12px;
+	font-size: 18px;
+	font-family: inherit;
+	color: black;
+	/* input field font inherit its parents font family */
+	border: none;
+	background-color: #e6e6e6;
+	border-radius: 9px;
+	box-shadow: 0 1px 2px rgb(255, 255, 255);
+}
+.contact-us-form input::placeholder {
+	color: #b3b3b3;
+}
+
+
+/************************/
+/* SECTION OF FOOTER */
+/************************/
+
+.footer {
+	padding: 128px 0;
+	border-top: 1px solid #d0d0d0;
+}
+.grid--footer {
+	grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+.logo-col {
+	display: flex;
+	flex-direction: column;
+}
+.footer-logo {
+	display: block;
+	/* img tag inside a tag, and img and a are inline tag
+	so if we want to give box model(margin\,padding..etc)
+	we wamt to give block elemnt */
+	margin-bottom: 32px;
+}
+.social-links {
+	list-style: none;
+	display: flex;
+	gap: 24px;
+}
+.social-icon {
+	height: 24px;
+	width: 24px;
+}
+.copyright {
+	font-size: 14px;
+	color: #666666;
+	line-height: 1.6;
+	margin-top: auto;
+}
+.footer-heading {
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 40px;
+}
+.contacts {
+	font-style: normal;
+	/* address tag have default italic text style
+	to fix that we give font-style normal */
+	font-size: 16px;
+	line-height: 1.6 ;
+}
+.address {
+	margin-bottom: 24px;
+}
+.footer-nav{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+.footer-link:link,.footer-link:visited {
+	text-decoration: none;
+	font-size: 16px;
+	color: black;
+}
+
+.footer-link:hover,.footer-link:active {
+	color: #b3b3b3;
+}
